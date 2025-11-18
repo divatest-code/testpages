@@ -1,71 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
-
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="login.js" defer></script>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
             background: #f5f7fa;
-            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        header {
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
             background: #1565C0;
-            padding: 20px;
-            color: white;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            text-align: center;
-        }
-
-        .btn {
-            padding: 12px 20px;
-            background: #1565C0;
-            color: white;
             border: none;
             border-radius: 6px;
+            color: white;
             cursor: pointer;
             font-size: 16px;
-            text-decoration: none;
         }
 
-        .btn:hover {
+        button:hover {
             background: #0d47a1;
         }
 
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            padding: 20px;
-            color: #777;
+        #message {
+            margin-top: 10px;
+            display: none;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
+    <div class="card">
+        <h2>Login</h2>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
+        <form id="loginForm">
+            <input id="username" type="text" placeholder="Username" />
+            <input id="password" type="password" placeholder="Password" />
+            <button type="submit">Login</button>
+        </form>
 
-    <div class="container">
-        <h2>Hello!</h2>
-        <p>This is a simple static website hosted on GitHub Pages.</p>
-
-        <a class="btn" href="#">Learn More</a>
+        <div id="message"></div>
     </div>
-
-    <footer>
-        © 2025 My Website
-    </footer>
-
 </body>
 </html>
